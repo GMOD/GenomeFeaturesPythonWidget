@@ -11,3 +11,6 @@ genomefeatures/static/
 # OS X
 .DS_Store
 *.swp
+
+.idea
+venv

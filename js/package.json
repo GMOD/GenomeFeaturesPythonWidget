@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@jupyter-widgets/base": "^1.0.0",
+    "genomefeaturecomponent": "^0.1.2",
     "lodash": "^4.17.4"
   },
   "jupyterlab": {
