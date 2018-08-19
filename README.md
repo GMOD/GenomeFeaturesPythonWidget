@@ -24,3 +24,10 @@ Using python3 load notebook jupyter notebook:
 
     from genomefeatures import *
 	HelloWorld()
+
+
+To update only the JS:
+
+    pip3 install -e .
+
+And then reload the current book. 
