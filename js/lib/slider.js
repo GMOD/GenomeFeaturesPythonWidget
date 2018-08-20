@@ -2,7 +2,9 @@
 
 // var d3 = require('d3');
 var GenomeFeatureComponent  = require('../../../GenomeFeatureComponent');
+// require('../../../GenomeFeatureComponent/src/App.css');
 // require('./slider.less');
+require('./genomeFeature.css');
 
 
 var create = function (that) {
