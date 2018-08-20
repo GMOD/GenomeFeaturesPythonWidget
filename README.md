@@ -6,12 +6,6 @@ Genome Features Widget Library
 Installation
 ------------
 
-To install use pip:
-
-    pip3 install genomefeatures
-    jupyter nbextension enable --py --sys-prefix genomefeatures
-
-
 For a development installation (requires npm),
 
     git clone https://github.com/bbop/genomefeatures.git
@@ -31,3 +25,9 @@ To update only the JS:
     pip3 install -e .
 
 And then reload the current book. 
+
+To install on production (when ready) use pip:
+
+    pip3 install genomefeatures
+    jupyter nbextension enable --py --sys-prefix genomefeatures
+
