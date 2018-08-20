@@ -1,6 +1,6 @@
 var widgets = require('@jupyter-widgets/base');
 var _ = require('lodash');
-var d3_slider = require('./slider');
+var d3_slider = require('./genomeFeature');
 
 
 // Custom Model. Custom widgets models must at least provide default values
@@ -46,7 +46,7 @@ var HelloView = widgets.DOMWidgetView.extend({
 var GenomeFeatureModel = widgets.DOMWidgetModel.extend({
     defaults: _.extend(widgets.DOMWidgetModel.prototype.defaults(), {
         _model_name: 'GenomeFeatureModel',
-        _view_name: 'SliderView',
+        _view_name: 'GenomeFeatureView',
         _model_module : 'genomefeatures',
         _view_module : 'genomefeatures',
         _model_module_version: '0.1.0',
@@ -76,7 +76,7 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
 
     value_changed: function () {
 
-        console.log('jupyter-widget-d3-slider SliderModel start value_changed');
+        console.log('jupyter-widget-d3-slider GenomeFeatureModel start value_changed');
 
         // explicit
         var that = this;
@@ -89,6 +89,6 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
 module.exports = {
     HelloModel : HelloModel,
     HelloView : HelloView,
-    SliderModel: GenomeFeatureModel,
-    SliderView: GenomeFeatureView
+    GenomeFeatureModel: GenomeFeatureModel,
+    GenomeFeatureView: GenomeFeatureView
 };

@@ -15,8 +15,8 @@ class HelloWorld(widgets.DOMWidget):
 @widgets.register
 class GenomeFeature(widgets.DOMWidget):
     """An example widget."""
-    _view_name = Unicode('SliderView').tag(sync=True)
-    _model_name = Unicode('SliderModel').tag(sync=True)
+    _view_name = Unicode('GenomeFeatureView').tag(sync=True)
+    _model_name = Unicode('GenomeFeatureModel').tag(sync=True)
     _view_module = Unicode('genomefeatures').tag(sync=True)
     _model_module = Unicode('genomefeatures').tag(sync=True)
     _view_module_version = Unicode('^0.1.0').tag(sync=True)
