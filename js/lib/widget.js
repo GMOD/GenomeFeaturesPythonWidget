@@ -43,9 +43,9 @@ var HelloView = widgets.DOMWidgetView.extend({
     }
 });
 
-var SliderModel = widgets.DOMWidgetModel.extend({
+var GenomeFeatureModel = widgets.DOMWidgetModel.extend({
     defaults: _.extend(widgets.DOMWidgetModel.prototype.defaults(), {
-        _model_name: 'SliderModel',
+        _model_name: 'GenomeFeatureModel',
         _view_name: 'SliderView',
         _model_module : 'genomefeatures',
         _view_module : 'genomefeatures',
@@ -56,10 +56,10 @@ var SliderModel = widgets.DOMWidgetModel.extend({
 });
 
 // derived from https://bl.ocks.org/mbostock/6452972
-var SliderView = widgets.DOMWidgetView.extend({
+var GenomeFeatureView = widgets.DOMWidgetView.extend({
     render: function () {
 
-        console.log('jupyter-widget-d3-slider SliderModel start render');
+        console.log('jupyter-widget-d3-slider GenomeFeatureModel start render');
 
         // explicit
         var that = this;
@@ -89,6 +89,6 @@ var SliderView = widgets.DOMWidgetView.extend({
 module.exports = {
     HelloModel : HelloModel,
     HelloView : HelloView,
-    SliderModel: SliderModel,
-    SliderView: SliderView
+    SliderModel: GenomeFeatureModel,
+    SliderView: GenomeFeatureView
 };
