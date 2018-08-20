@@ -35,7 +35,7 @@ var create = function (that) {
     //
     // // slider
     var slider = svg.append('g')
-    // 	.attr('class', 'jupyter-widget d3-slider slider')
+    	// .attr('class', 'track')
     	.attr('transform', 'translate(' + margin.left + ',' + height / 2 + ')');
     //
     // // build slider and attach drag behavior
@@ -121,9 +121,9 @@ var value_changed = function (that) {
 
     // tweened move - works but does not fit
     // jupyter-widget 1 model - many views concept
-    // var slider = that.slider;
-    // slider.transition()
-    // 	.duration(750)
+    var slider = that.slider;
+    slider.transition()
+    	.duration(750)
     // 	.tween('hue', function () {
     // 		var i = d3.interpolate(prev_h, new_h);
     // 		return function (t) { hue(i(t)); };
