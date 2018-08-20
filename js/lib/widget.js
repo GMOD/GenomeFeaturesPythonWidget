@@ -1,5 +1,6 @@
 var widgets = require('@jupyter-widgets/base');
 var _ = require('lodash');
+// var d3_slider = require('./slider');
 
 
 // Custom Model. Custom widgets models must at least provide default values
@@ -42,8 +43,52 @@ var HelloView = widgets.DOMWidgetView.extend({
     }
 });
 
+// var SliderModel = widgets.DOMWidgetModel.extend({
+//     defaults: _.extend(widgets.DOMWidgetModel.prototype.defaults(), {
+//         _model_name: 'SliderModel',
+//         _view_name: 'SliderView',
+//         _model_module : 'genomefeatures',
+//         _view_module : 'genomefeatures',
+//         _model_module_version: '0.1.0',
+//         _view_module_version: '0.1.0',
+//         value: 1.0
+//     })
+// });
+//
+// // derived from https://bl.ocks.org/mbostock/6452972
+// var SliderView = widgets.DOMWidgetView.extend({
+//     render: function () {
+//
+//         console.log('jupyter-widget-d3-slider SliderModel start render');
+//
+//         // explicit
+//         var that = this;
+//
+//         // build svg and append it to dom
+//         d3_slider.create(that);
+//
+//         // event listener
+//         that.model.on('change:value', that.value_changed, that);
+//
+//         // debug
+//         window.dom = that.el;
+//     },
+//
+//     value_changed: function () {
+//
+//         console.log('jupyter-widget-d3-slider SliderModel start value_changed');
+//
+//         // explicit
+//         var that = this;
+//
+//         // update
+//         d3_slider.value_changed(that);
+//     }
+// });
 
 module.exports = {
     HelloModel : HelloModel,
-    HelloView : HelloView
+    HelloView : HelloView,
+    // SliderModel: SliderModel,
+    // SliderView: SliderView
 };
