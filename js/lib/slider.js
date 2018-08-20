@@ -1,6 +1,7 @@
 'use strict';
 
 var d3 = require('d3');
+// var GenerateGenomeView = require('genomefeaturecomponent');
 // require('./slider.less');
 
 
@@ -83,7 +84,7 @@ var create = function (that) {
     };
     //
     // // init values
-    var h = that.model.get('value');
+    // var h = that.model.get('value');
     //
     // // direct set
     // // hue(h);
@@ -122,8 +123,7 @@ var value_changed = function (that) {
     // tweened move - works but does not fit
     // jupyter-widget 1 model - many views concept
     var slider = that.slider;
-    slider.transition()
-    	.duration(750)
+    slider.transition().duration(750);
     // 	.tween('hue', function () {
     // 		var i = d3.interpolate(prev_h, new_h);
     // 		return function (t) { hue(i(t)); };
@@ -131,10 +131,10 @@ var value_changed = function (that) {
 };
 
 
-var slider = {
+var genomeFeatureComponent = {
     create: create,
     value_changed: value_changed
 };
 
-module.exports = slider;
+module.exports = genomeFeatureComponent;
 

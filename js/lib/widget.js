@@ -1,5 +1,7 @@
 var widgets = require('@jupyter-widgets/base');
 var _ = require('lodash');
+// var GenomeFeatureComponent  = require('genomefeaturecomponent');
+var GenomeFeatureComponent  = require('../../../GenomeFeatureComponent');
 var d3_slider = require('./slider');
 
 
