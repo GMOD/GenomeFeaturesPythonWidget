@@ -1,7 +1,5 @@
 var widgets = require('@jupyter-widgets/base');
 var _ = require('lodash');
-// var GenomeFeatureComponent  = require('genomefeaturecomponent');
-var GenomeFeatureComponent  = require('../../../GenomeFeatureComponent');
 var d3_slider = require('./slider');
 
 
@@ -73,7 +71,7 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
         that.model.on('change:value', that.value_changed, that);
 
         // debug
-        window.dom = that.el;
+        // window.dom = that.el;
     },
 
     value_changed: function () {
