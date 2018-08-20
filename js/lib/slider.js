@@ -1,6 +1,6 @@
 'use strict';
 
-var d3 = require('d3');
+// var d3 = require('d3');
 var GenomeFeatureComponent  = require('../../../GenomeFeatureComponent');
 // require('./slider.less');
 
@@ -9,22 +9,21 @@ var create = function (that) {
     console.log('start create');
 
     // create svg element
-    let mainViewer = document.createElement('div');
-    mainViewer.setAttribute("id","viewer");
-    // var svgElmt = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    // svgElmt.setAttribute('width', '900');
-    // svgElmt.setAttribute('height', '100');
+    // let mainViewer = document.createElement('div');
+    var svgElmt = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgElmt.setAttribute('width', '900');
+    svgElmt.setAttribute('height', '100');
+    svgElmt.setAttribute("id","viewer");
     // //
     // // // append svg element to dom
-    // that.el.appendChild(svgElmt);
-    that.el.appendChild(mainViewer);
+    that.el.appendChild(svgElmt);
     GenomeFeatureComponent(5,75574916,75656722,"Mus musculus","#viewer");
     // //
     // // that.el.setAttribute('class', 'jupyter-widget d3-slider');
     // //
     // // // d3 select
-    // var svg = d3.select(svgElmt);
-    // // .attr('class', 'area');
+    // var svg = d3.select(mainViewer);
+    // .attr('class', 'area');
     // window.svg = svg;
     // //
     // // // Attributes
