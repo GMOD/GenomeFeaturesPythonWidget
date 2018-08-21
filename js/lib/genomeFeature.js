@@ -27,7 +27,8 @@ var create = function (that) {
     // //
     // // // append svg element to dom
     that.el.appendChild(svgElmt);
-    var chromosome = 7 ;
+    var chromosome = that.model.get("chromosome");
+    chromosome = chromosome ? chromosome : 7 ;
     var start = 27144266;
     var end =   27149087 ;
 

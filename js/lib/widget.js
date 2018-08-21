@@ -54,6 +54,7 @@ var GenomeFeatureModel = widgets.DOMWidgetModel.extend({
         title: undefined,
         genome: undefined ,
         location: undefined,
+        chromosome : undefined,
         gene: undefined,
         track: undefined,
         highlightNames:undefined,
