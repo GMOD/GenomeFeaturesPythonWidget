@@ -1,5 +1,6 @@
 import ipywidgets as widgets
-from traitlets import Unicode, Float
+from traitlets import Unicode, List
+
 
 @widgets.register
 class HelloWorld(widgets.DOMWidget):
@@ -24,5 +25,8 @@ class GenomeFeature(widgets.DOMWidget):
     _model_module_version = Unicode('^0.1.0').tag(sync=True)
     title = Unicode().tag(sync=True)
     location = Unicode().tag(sync=True)
-    gene = Unicode().tag(sync=True)
     genome = Unicode().tag(sync=True)
+    gene = Unicode().tag(sync=True)
+    track = Unicode().tag(sync=True)
+    highlightNames = Unicode().tag(sync=True)
+    server = Unicode().tag(sync=True)

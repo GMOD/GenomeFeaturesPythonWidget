@@ -41,9 +41,32 @@ var create = function (that) {
     if(!genome){
         genome = 'Homo sapiens';
     }
+    var gene = that.model.get("gene");
+    var server = that.model.get("server");
+    if(!server){
+        server = 'https://agr-apollo.berkeleybop.io/apollo/';
+    }
+    var track = that.model.get("track");
+    if(!track){
+        track = 'All Genes';
+    }
+    var highlightNamesString = that.model.get("highlightNames");
+    alert(highlightNamesString);
+    let highlightNames = highlightNamesString ? highlightNamesString.split(',') : undefined;
 
-    console.log(chromosome,start,end,genome);
-    GenomeFeatureComponent(chromosome,start,end,genome,"#viewer");
+    // let {chromosome, start, end, genome, server, track, highlightNames} = options;
+    var options = {
+        chromosome,
+        start,
+        end,
+        genome,
+        gene,
+        track,
+        highlightNames,
+        server,
+    };
+    console.log('options',options);
+    GenomeFeatureComponent("#viewer",options);
 
 
     console.log('end create');
