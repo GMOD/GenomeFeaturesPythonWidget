@@ -27,8 +27,8 @@ var create = function (that) {
     var location = that.model.get("location");
     if(location){
         chromosome = location.split(':')[0];
-        start = location.split(':')[1].split('...')[0];
-        end = location.split(':')[1].split('...')[0];
+        start = location.split(':')[1].split('..')[0];
+        end = location.split(':')[1].split('..')[0];
     }
     var genome = that.model.get("genome");
     if(!genome){
