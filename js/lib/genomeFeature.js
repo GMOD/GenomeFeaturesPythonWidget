@@ -12,6 +12,12 @@ var create = function (that) {
 
     // create svg element
     // let mainViewer = document.createElement('div');
+    var title = that.model.get("title") ;
+    var header = document.createElement('h2');
+    var txtnode = document.createTextNode(title);
+    header.appendChild(txtnode)
+    that.el.appendChild(header);
+
     var svgElmt = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svgElmt.setAttribute('width', '900');
     svgElmt.setAttribute('height', '100');
@@ -19,7 +25,6 @@ var create = function (that) {
     // //
     // // // append svg element to dom
     that.el.appendChild(svgElmt);
-    var title = that.model.get("title") ? that.model.get("title"): "Mus musculus";
     var chromosome = 5 ;
     var start = 75574916 ;
     var end = 75656722 ;
@@ -38,8 +43,6 @@ var create = function (that) {
     console.log(chromosome,start,end,genome);
     GenomeFeatureComponent(chromosome,start,end,genome,"#viewer");
 
-    var txtnode = document.createTextNode(title);
-    that.el.appendChild(txtnode);
 
     console.log('end create');
 };
