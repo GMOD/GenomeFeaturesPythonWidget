@@ -20,7 +20,22 @@ var create = function (that) {
     // // // append svg element to dom
     that.el.appendChild(svgElmt);
     var title = that.model.get("title") ? that.model.get("title"): "Mus musculus";
-    GenomeFeatureComponent(5,75574916,75656722,"Mus musculus","#viewer");
+    var chromosome = 5 ;
+    var start = 75574916 ;
+    var end = 75656722 ;
+
+    var location = that.model.get("location");
+    if(location){
+        chromosome = location.split(':')[0];
+        start = location.split(':')[1].split('...')[0];
+        end = location.split(':')[1].split('...')[0];
+    }
+    var genome = that.model.get("genome");
+    if(!genome){
+        genome = 'Mus musculus';
+    }
+
+    GenomeFeatureComponent(chromosome,start,end,genome,"#viewer");
 
     var txtnode = document.createTextNode(title);
     that.el.appendChild(txtnode);

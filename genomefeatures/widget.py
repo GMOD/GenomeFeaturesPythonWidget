@@ -22,5 +22,6 @@ class GenomeFeature(widgets.DOMWidget):
     _model_module = Unicode('genomefeatures').tag(sync=True)
     _view_module_version = Unicode('^0.1.0').tag(sync=True)
     _model_module_version = Unicode('^0.1.0').tag(sync=True)
-    value = Float(80.0).tag(sync=True)
     title = Unicode().tag(sync=True)
+    location = Unicode().tag(sync=True)
+    gene = Unicode().tag(sync=True)
