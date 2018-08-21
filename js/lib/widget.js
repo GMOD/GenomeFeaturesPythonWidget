@@ -51,7 +51,9 @@ var GenomeFeatureModel = widgets.DOMWidgetModel.extend({
         _view_module : 'genomefeatures',
         _model_module_version: '0.1.0',
         _view_module_version: '0.1.0',
+        title: 'Genome Feature',
         value: 1.0
+
     })
 });
 
@@ -62,6 +64,7 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
         console.log('jupyter-widget-d3-slider GenomeFeatureModel start render');
 
         // explicit
+        console.log('title',this.model.get('title'));
         var that = this;
 
         // build svg and append it to dom
@@ -77,6 +80,7 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
     value_changed: function () {
 
         console.log('jupyter-widget-d3-slider GenomeFeatureModel start value_changed');
+        console.log('changed title',this.model.get('title'));
 
         // explicit
         var that = this;

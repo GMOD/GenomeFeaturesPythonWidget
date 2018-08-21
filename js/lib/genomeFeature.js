@@ -19,7 +19,11 @@ var create = function (that) {
     // //
     // // // append svg element to dom
     that.el.appendChild(svgElmt);
+    var title = that.model.get("title") ? that.model.get("title"): "Mus musculus";
     GenomeFeatureComponent(5,75574916,75656722,"Mus musculus","#viewer");
+
+    var txtnode = document.createTextNode(title);
+    that.el.appendChild(txtnode);
 
     console.log('end create');
 };

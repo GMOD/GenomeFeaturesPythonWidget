@@ -10,7 +10,8 @@ class HelloWorld(widgets.DOMWidget):
     _model_module = Unicode('genomefeatures').tag(sync=True)
     _view_module_version = Unicode('^0.1.0').tag(sync=True)
     _model_module_version = Unicode('^0.1.0').tag(sync=True)
-    # value = Unicode('Hello World B').tag(sync=True)  # this is the model value, if provided it will default to this
+    value = Unicode('Hello World!').tag(sync=True)
+
 
 @widgets.register
 class GenomeFeature(widgets.DOMWidget):
@@ -22,3 +23,4 @@ class GenomeFeature(widgets.DOMWidget):
     _view_module_version = Unicode('^0.1.0').tag(sync=True)
     _model_module_version = Unicode('^0.1.0').tag(sync=True)
     value = Float(80.0).tag(sync=True)
+    title = Unicode().tag(sync=True)
