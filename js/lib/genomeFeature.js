@@ -11,8 +11,10 @@ var create = function (that) {
     console.log('start create');
 
     // create svg element
-    // let mainViewer = document.createElement('div');
+    // GenomeFeature(title='Sox9b',genome='Homo sapiens',location='7:27144266..27149087')
     var title = that.model.get("title") ;
+
+    title = title ? title : 'HOXA6';
     var header = document.createElement('h2');
     var txtnode = document.createTextNode(title);
     header.appendChild(txtnode)
@@ -25,9 +27,9 @@ var create = function (that) {
     // //
     // // // append svg element to dom
     that.el.appendChild(svgElmt);
-    var chromosome = 5 ;
-    var start = 75574916 ;
-    var end = 75656722 ;
+    var chromosome = 7 ;
+    var start = 27144266;
+    var end =   27149087 ;
 
     var location = that.model.get("location");
     if(location){
@@ -37,7 +39,7 @@ var create = function (that) {
     }
     var genome = that.model.get("genome");
     if(!genome){
-        genome = 'Mus musculus';
+        genome = 'Homo sapiens';
     }
 
     console.log(chromosome,start,end,genome);
