@@ -25,3 +25,4 @@ class GenomeFeature(widgets.DOMWidget):
     title = Unicode().tag(sync=True)
     location = Unicode().tag(sync=True)
     gene = Unicode().tag(sync=True)
+    genome = Unicode().tag(sync=True)

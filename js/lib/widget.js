@@ -52,6 +52,7 @@ var GenomeFeatureModel = widgets.DOMWidgetModel.extend({
         _model_module_version: '0.1.0',
         _view_module_version: '0.1.0',
         title: 'Genome Feature',
+        genome: undefined ,
         location: undefined,
         gene: undefined
     })

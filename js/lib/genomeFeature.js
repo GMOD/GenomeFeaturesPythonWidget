@@ -28,13 +28,14 @@ var create = function (that) {
     if(location){
         chromosome = location.split(':')[0];
         start = location.split(':')[1].split('..')[0];
-        end = location.split(':')[1].split('..')[0];
+        end = location.split(':')[1].split('..')[1];
     }
     var genome = that.model.get("genome");
     if(!genome){
         genome = 'Mus musculus';
     }
 
+    console.log(chromosome,start,end,genome);
     GenomeFeatureComponent(chromosome,start,end,genome,"#viewer");
 
     var txtnode = document.createTextNode(title);
