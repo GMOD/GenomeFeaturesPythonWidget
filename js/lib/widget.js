@@ -1,6 +1,6 @@
 var widgets = require('@jupyter-widgets/base');
 var _ = require('lodash');
-var d3_slider = require('./genomeFeature');
+var genomeComponentLibrary = require('./genomeFeature');
 
 
 // Custom Model. Custom widgets models must at least provide default values
@@ -69,7 +69,7 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
         var that = this;
 
         // build svg and append it to dom
-        d3_slider.create(that);
+        genomeComponentLibrary.create(that);
 
         // event listener
         that.model.on('change:value', that.value_changed, that);
@@ -87,7 +87,7 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
         var that = this;
 
         // update
-        d3_slider.value_changed(that);
+        genomeComponentLibrary.value_changed(that);
     }
 });
 
