@@ -28,5 +28,5 @@ class GenomeFeature(widgets.DOMWidget):
     genome = Unicode().tag(sync=True)
     gene = Unicode().tag(sync=True)
     track = Unicode().tag(sync=True)
-    highlightNames = Unicode().tag(sync=True)
+    highlightNames = List().tag(sync=True)
     server = Unicode().tag(sync=True)

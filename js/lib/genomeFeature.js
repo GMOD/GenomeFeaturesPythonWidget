@@ -50,9 +50,7 @@ var create = function (that) {
     if(!track){
         track = 'All Genes';
     }
-    var highlightNamesString = that.model.get("highlightNames");
-    alert(highlightNamesString);
-    let highlightNames = highlightNamesString ? highlightNamesString.split(',') : undefined;
+    var highlightNames = that.model.get("highlightNames");
 
     // let {chromosome, start, end, genome, server, track, highlightNames} = options;
     var options = {
