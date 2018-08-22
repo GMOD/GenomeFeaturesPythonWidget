@@ -70,6 +70,7 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
 
         // explicit
         console.log('title',this.model.get('title'));
+        console.log(this.model.keys().join(','));
         var that = this;
 
         // build svg and append it to dom

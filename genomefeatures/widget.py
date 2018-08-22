@@ -1,5 +1,6 @@
 import ipywidgets as widgets
 from traitlets import Unicode, List
+import uuid
 
 
 @widgets.register
