@@ -13,6 +13,28 @@ function guid() {
     return text;
 }
 
+var getTracks = function(options){
+    let url = options.server + 'track/list/' + options.genome ;
+    return new Promise((resolve, reject) =>{
+        fetch(url).then((response) => {
+            resolve(response.json())
+        }).catch(error => {
+            reject(error);
+        })
+    });
+};
+var getGenomes = function(options){
+    // needs to show public ones
+    let url = options.server + 'organism/findAllOrganisms';
+    return new Promise((resolve, reject) =>{
+        fetch(url).then((response) => {
+            resolve(response.json())
+        }).catch(error => {
+            reject(error);
+        })
+    });
+};
+
 var create = function (that) {
     console.log('start create');
 
@@ -67,13 +89,34 @@ var create = function (that) {
     }
     let highlightNames = that.model.get("highlightNames");
 
-    console.log('action',action)
+    console.log('action',action);
+
+    let options = {
+        chromosome,
+        start,
+        end,
+        genome,
+        gene,
+        track,
+        highlightNames,
+        server,
+    };
 
     switch (action) {
         case 'getTracks':
+            getTracks(options).then((data) => {
+                that.el.textContent = data;
+            }).catch((error) => {
+                console.error(error);
+            });
             that.el.textContent = 'Lookup for tracks goes here';
             break;
         case 'getGenomes':
+            getGenomes(options).then((data) => {
+                that.el.textContent = data;
+            }).catch((error) => {
+                console.error(error);
+            });
             that.el.textContent = 'Lookup for genomes goes here';
             break;
         case 'getServer':
@@ -81,16 +124,6 @@ var create = function (that) {
             break;
         case 'display':
         default:
-            let options = {
-                chromosome,
-                start,
-                end,
-                genome,
-                gene,
-                track,
-                highlightNames,
-                server,
-            };
             console.log('options', options);
             that.component = GenomeFeatureViewer(options, '#' + componentID);
             break;
