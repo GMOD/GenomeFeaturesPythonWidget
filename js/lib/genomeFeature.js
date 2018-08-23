@@ -1,11 +1,6 @@
 'use strict';
-
-// var d3 = require('d3');
-var GenomeFeatureComponent = require('../../../GenomeFeatureComponent');
-// require('../../../GenomeFeatureComponent/src/App.css');
-// require('./test.less');
-require('./genomeFeature.css');
-
+import GenomeFeatureViewer from 'genomefeaturecomponent';
+require('./genomeFeature.css')
 function guid() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -78,7 +73,7 @@ var create = function (that) {
         server,
     };
     console.log('options', options);
-    that.component = GenomeFeatureComponent('#' + componentID, options);
+    that.component = GenomeFeatureViewer(options, '#' + componentID);
 
 
     console.log('end create');
@@ -115,5 +110,5 @@ var genomeFeatureComponent = {
     value_changed: value_changed
 };
 
-module.exports = genomeFeatureComponent;
+export {genomeFeatureComponent};
 

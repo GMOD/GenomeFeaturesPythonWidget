@@ -1,6 +1,6 @@
-var widgets = require('@jupyter-widgets/base');
-var _ = require('lodash');
-var genomeComponentLibrary = require('./genomeFeature');
+import * as widgets from '@jupyter-widgets/base';
+import _ from 'lodash';
+import {genomeFeatureComponent} from './genomeFeature';
 
 
 // Custom Model. Custom widgets models must at least provide default values
@@ -74,7 +74,7 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
         var that = this;
 
         // build svg and append it to dom
-        genomeComponentLibrary.create(that);
+        genomeFeatureComponent.create(that);
 
         // event listener
         that.model.on('change:value', that.value_changed, that);
@@ -92,13 +92,8 @@ var GenomeFeatureView = widgets.DOMWidgetView.extend({
         var that = this;
 
         // update
-        genomeComponentLibrary.value_changed(that);
+        genomeFeatureComponent.value_changed(that);
     }
 });
 
-module.exports = {
-    HelloModel : HelloModel,
-    HelloView : HelloView,
-    GenomeFeatureModel: GenomeFeatureModel,
-    GenomeFeatureView: GenomeFeatureView
-};
+export {HelloModel, HelloView, GenomeFeatureModel, GenomeFeatureView}
