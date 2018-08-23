@@ -32,3 +32,5 @@ class GenomeFeature(widgets.DOMWidget):
     track = Unicode().tag(sync=True)
     highlightNames = List().tag(sync=True)
     server = Unicode().tag(sync=True)
+    action = Unicode().tag(sync=True)
+

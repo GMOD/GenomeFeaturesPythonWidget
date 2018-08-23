@@ -59,6 +59,7 @@ var GenomeFeatureModel = widgets.DOMWidgetModel.extend({
         track: undefined,
         highlightNames:undefined,
         server:undefined,
+        action:undefined,
     })
 });
 
