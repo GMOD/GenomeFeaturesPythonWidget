@@ -8,7 +8,7 @@ Installation
 
 For a development installation (requires npm),
 
-    git clone https://github.com/bbop/genomefeatures.git
+    git clone https://github.com/nathandunn/genomefeatures.git
     cd genomefeatures
     pip3 install -e .
     jupyter nbextension install --py --symlink --sys-prefix genomefeatures
