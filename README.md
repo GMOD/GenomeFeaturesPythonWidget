@@ -19,7 +19,7 @@ Install Component (we are using local in dev):
     npm i
     npm run build
 
-Install Widget:
+Install Widget (not as root!!):
 
     git clone https://github.com/nathandunn/genomefeatures.git
     cd genomefeatures
