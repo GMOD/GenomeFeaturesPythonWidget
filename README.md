@@ -1,6 +1,8 @@
 genomefeatures
 ===============================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/GMOD/GenomeFeaturesPythonWidget.svg)](https://greenkeeper.io/)
+
 Genome Features Widget Library
 
 Installation
